@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: airlock
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.23.2
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AIRLOCK_ENCRYPTION_KEY
+        generateValue: true
+      - key: AIRLOCK_DB_PATH
+        value: ./airlock.db
