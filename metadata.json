@@ -1,0 +1,6 @@
+{
+  "name": "AirLock",
+  "description": "Self-hosted, fail-closed AI security gateway with local Bangla, Banglish, and English DLP redaction, prompt-injection defense, and MCP guardrail routing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
